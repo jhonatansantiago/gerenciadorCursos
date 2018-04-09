@@ -5,8 +5,11 @@ from django.views.generic import TemplateView
 
 
 urlpatterns = patterns('',
-    url(r'^$', views.TurmaListView.as_view()),
+    url(r'^$', TemplateView.as_view(template_name='turmaApp/inicial.html'), name='inicial'),
 
+    url(r'^inicial/$', TemplateView.as_view(template_name='turmaApp/inicial.html'), name='inicial'),
+
+    url(r'^escola/$', views.TurmaListView.as_view(), name='lista_turma'),
     url(r'^turma/lista/$', views.TurmaListView.as_view(), name='lista_turma'),
     url(r'^turma/cadastro/$', views.TurmaCreateView.as_view(), name='cadastro_turma'),
     url(r'^turma/(?P<pk>\d+)/edita/$', views.TurmaUpdateView.as_view(), name='edita_turma'),    

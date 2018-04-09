@@ -123,4 +123,3 @@ class ProfessorDeleteView(generic.DeleteView):
     model = Professor
     success_url = 'saved'
 
-

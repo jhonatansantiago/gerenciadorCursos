@@ -21,19 +21,40 @@ body {
       background-color: #2f2f2f; /* Black Gray */
       color: #fff;
   }
-  .container-fluid {
-      padding-top: 70px;
-      padding-bottom: 70px;
+
+  .bg-5 { 
+      background-color: #0c1420; /* Green */
   }
+
+  .container-fluid {
+      background-color: #0c1420;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+  }
+
   .navbar {
-      padding-top: 15px;
-      padding-bottom: 15px;
+      padding-top: 4px;
+      padding-bottom: 4px;
       border: 0;
       border-radius: 0;
       margin-bottom: 0;
       font-size: 12px;
       letter-spacing: 5px;
+      background-color: #060b12;
   }
   .navbar-nav  li a:hover {
-      color: #1abc9c !important;
+      color: #07916d !important;
+
+  }
+  .jumbotron {
+      background-color: #0c1420;
+      color: #fff;
+      padding: 50px 25px;
+      font-family: Montserrat, sans-serif;
+  }
+
+  .container-fluid2 {
+      background-color: #060b12;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
   }
