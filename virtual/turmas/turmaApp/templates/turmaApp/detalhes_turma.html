@@ -1,23 +1,20 @@
 {% include "turmaApp/menu.html" %}
 
-<form class="form form-inline ">
+<form>
 
-
-   
-
-    <div class="div_titulo">
-        <h1 class="h1"> Detalhes da turma {{turma.nome}}</h1>
+    <div class="jumbotron text-center">
+        <h1 class="h1"> DETALHES DA {{turma.nome}}</h1>
     </div>
     
-     <h1 class="h2"> Professores da turma {{turma.nome}}</h1>
+     <h1 class="h2" style="color: #000000" > PROFESSORES DA {{turma.nome}}</h1>
     <div style=" padding-top: 3%;">
         {% if turma.professor_set.all  %}   
         <table class="table table-striped" style="text-align: center;" >
 
             <tr>
-                <th class="texto_centralizado">Professor</th>
-                <th class="texto_centralizado">Disciplina</th>	
-                <th class="texto_centralizado">Tumas que ministra</th>	
+                <th class="texto_centralizado" style="color: #000000" >Professor</th>
+                <th class="texto_centralizado" style="color: #000000" >Disciplina</th>	
+                <th class="texto_centralizado" style="color: #000000" >Tumas que ministra</th>	
                 <th></th>
                 <th></th>
             </tr>
@@ -27,9 +24,9 @@
                     <a href="#"> {{ professor.nome}} </a>
 
                 </td>	
-                <td>{{ professor.disciplina }}</td>
+                <td style="color: #000000">{{ professor.disciplina }}</td>
                      
-                <td>  
+                <td style="color: #000000">  
                     {%for t in  professor.turma.all %}
                        {{t.nome}} -
                     
@@ -43,18 +40,18 @@
             {% endfor %}	
         </table>
         {% else %}
-        <p class="h2">Sem Professores nesta turma... Isso pode ser algo grave!</p>
+        <p class="h2" style="color: #000000">Sem Professores nesta turma.</p>
         {% endif %}
 
     </div>
      <br />
-      <h1 class="h2"> Alunos da turma {{turma.nome}}</h1>
+      <h1 class="h2" style="color: #000000"> Alunos da turma {{turma.nome}}</h1>
     <div style=" padding-top: 3%;">
         {% if turma.aluno_set.all  %}   
         <table class="table table-striped" style="text-align: center;" >
 
             <tr>
-                <th class="texto_centralizado">Aluno</th>
+                <th class="texto_centralizado" style="color: #000000">Aluno</th>
 
                 <th></th>
                 <th></th>
@@ -73,7 +70,7 @@
             {% endfor %}	
         </table>
         {% else %}
-        <p class="h2">Sem Alunos nesta turma... Esta turma deveria existir?</p>
+        <p class="h2" style="color: #000000">Sem Alunos nesta turma.</p>
         {% endif %}
 
     </div>

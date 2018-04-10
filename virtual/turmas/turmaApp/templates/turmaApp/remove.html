@@ -3,7 +3,7 @@
 
 <form method='POST' class="form form-inline" >
    {% csrf_token %}
-   <p class="h2"> Tem certeza que deseja deletar "{{ object.nome }}" ?</p>
+   <p style="color: #000000" class="h2"> Tem certeza que deseja deletar "{{ object.nome }}" ?</p>
    <input type="submit" style="position: relative; left: 40%; " class="btn btn-small btn-primary " value="Sim, Desejo deletar" />
 </form>
 
