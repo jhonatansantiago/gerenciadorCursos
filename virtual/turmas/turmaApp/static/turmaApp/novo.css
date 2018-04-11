@@ -27,7 +27,7 @@ body {
   }
 
   .container-fluid {
-      background-color: #0c1420;
+      background-color: #000000;
       padding: 100px 25px;
       font-family: Montserrat, sans-serif;
   }
@@ -53,8 +53,11 @@ body {
       font-family: Montserrat, sans-serif;
   }
 
+  
   .container-fluid2 {
       background-color: #060b12;
       padding: 100px 25px;
       font-family: Montserrat, sans-serif;
   }
+
+  

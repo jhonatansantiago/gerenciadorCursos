@@ -25,8 +25,8 @@
         <table class="table table-striped" style="text-align: center;" >
 
             <tr>
-                <th class="texto_centralizado">Aluno</th>
-                <th class="texto_centralizado">Turma</th>		
+                <th class="texto_centralizado" style="color: black;">Aluno</th>
+                <th class="texto_centralizado" style="color: black;">Turma</th>		
 
                 <th></th>
                 <th></th>
@@ -37,7 +37,7 @@
                     <a href="#"> {{ item.nome}} </a>
 
                 </td>	
-                <td>{{ item.turma }}</td>		
+                <td style="color: black;">{{ item.turma }}</td>		
 
 
                 <td> <a href="{% url 'escola:edita_aluno' item.id %}"> [Editar]    </a> </td>

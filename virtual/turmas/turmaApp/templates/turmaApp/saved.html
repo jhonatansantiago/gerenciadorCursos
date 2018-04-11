@@ -2,14 +2,24 @@
 
 <form  class="form form-inline" >
 
+	<div class="h1">
+		<div class="alert alert-success">
+	    	<strong>Sucesso!</strong> Operação Realizada
+	    </div>
+	</div>
 
-    <h1 class="h1" style="color: #000000">Sucesso! </h1>
-
-    <br />
     <div class="h2">
-        <p /><a href="{% url 'escola:lista_turma'  %}"> Voltar para Lista de turmas </a>
-        <p /><a href="{% url 'escola:lista_aluno'  %}"> Voltar para Lista de alunos </a>
-        <p /><a href="{% url 'escola:lista_professor'  %}"> Voltar para Lista professores</a>
+
+	    <div class="alert alert-info" style="text-align: center; padding-top: 1%; padding-bottom:1%; text-align: center;padding-right: 10px;font-size: 10pt;">
+	    	<a href="{% url 'escola:lista_turma'  %}" class="alert-link">Voltar para Lista de turmas</a>.
+	  	</div>
+	  	<div class="alert alert-info" style="text-align: center; padding-top: 1%; padding-bottom:1%; text-align: center;padding-right: 10px;font-size: 10pt;">
+	    	<a href="{% url 'escola:lista_aluno'  %}" class="alert-link">Voltar para Lista de alunos</a>.
+	  	</div>
+	  	<div class="alert alert-info" style="text-align: center; padding-top: 1%; padding-bottom:1%; text-align: center;padding-right: 10px;font-size: 10pt;">
+	    	<a href="{% url 'escola:lista_professor'  %}" class="alert-link">Voltar para Lista professores</a>.
+	  	</div>
+
     </div>
 </form>
 

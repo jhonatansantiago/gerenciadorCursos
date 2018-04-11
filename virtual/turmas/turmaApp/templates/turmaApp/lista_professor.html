@@ -24,9 +24,9 @@
         <table class="table table-striped" style="text-align: center;" >
 
             <tr>
-                <th class="texto_centralizado">Professor</th>
-                <th class="texto_centralizado">Discplina</th>		
-                <th class="texto_centralizado">Quantidade de turmas</th>
+                <th class="texto_centralizado" style="color: black;">Professor</th>
+                <th class="texto_centralizado" style="color: black;">Discplina</th>		
+                <th class="texto_centralizado" style="color: black;">Quantidade de turmas</th>
                 <th></th>
                 <th></th>
             </tr>
@@ -36,8 +36,8 @@
                     <a href="#"> {{ item.nome}} </a>
 
                 </td>	
-                <td>{{ item.disciplina }}</td>		
-                <td>{{ item.turma.count }}</td>
+                <td style="color: black;">{{ item.disciplina }}</td>		
+                <td style="color: black;">{{ item.turma.count }}</td>
 
                 <td> <a href="{% url 'escola:edita_professor' item.id %}"> [Editar]    </a> </td>
                 <td> <a href="{% url 'escola:deleta_professor' item.id %}"> [Excluir] </a> </td>
