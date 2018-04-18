@@ -1,0 +1,29 @@
+ <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="{% static 'turmaApp/bootstrap/css/bootstrap.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'turmaApp/bootstrap/css/bootstrap.min.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'turmaApp/style.css' %}" />
+        <script type="text/javascript" src="/static/turmaApp/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/static/turmaApp/bootstrap/js/bootstrap.js"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'turmaApp/telaInicial.css' %}" />
+    </head>
+    <body>
+	    <div class="jumbotron text-center">
+	      <h1 class="margin">Tela de Login</h1>
+	    </div>
+
+		{% block content %}
+		{% if user.is_authenticated %}
+		<p class="text-center" style="color: #000000 " >Usuario logado</p>
+
+		  {% else %}		  
+		  <form class="text-center" method="post" style="color: #000000">
+		  	<h2 style="font-family: Montserrat, sans-serif" >Login</h2>
+		    {% csrf_token %}
+		    {{ form.as_p }}
+		    <button type="submit" class="btn btn-primary "><span class="glyphicon glyphicon-user"></span> Login</button>
+		  </form>
+		  {% endif %}
+		{% endblock %}
+	</body>	

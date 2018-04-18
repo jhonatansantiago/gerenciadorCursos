@@ -4,6 +4,9 @@ from turmaApp.models import Turma, Aluno, Professor
 from django.views import generic
 from django.core.urlresolvers import reverse_lazy
 
+
+
+
 # Views da Turma =====================================================================================
 
 class TurmaListView(generic.ListView):
@@ -123,3 +126,6 @@ class ProfessorDeleteView(generic.DeleteView):
     model = Professor
     success_url = 'saved'
 
+#=========================================================================================================
+# Views de Autenticacao
+ 
