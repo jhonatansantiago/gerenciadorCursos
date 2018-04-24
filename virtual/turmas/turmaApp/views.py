@@ -24,9 +24,6 @@ class TurmaSearchView(generic.ListView):
 	def get_queryset(self):
 		pesquisa = self.request.REQUEST.get("pesquisa")
 		return  Turma.objects.filter(nome__startswith=pesquisa)
-		
-		
-
 
 class TurmaCreateView(generic.CreateView):
 	template_name = 'turmaApp/form.html'
@@ -107,8 +104,6 @@ class ProfessorSearchView(generic.ListView):
 		pesquisa = self.request.REQUEST.get("pesquisa")
 		return  Professor.objects.filter(nome__startswith=pesquisa)
 		
-
-
 
 class ProfessorCreateView(generic.CreateView):
     template_name = 'turmaApp/form.html'
