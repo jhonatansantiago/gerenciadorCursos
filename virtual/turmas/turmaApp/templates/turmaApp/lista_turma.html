@@ -19,11 +19,11 @@
         </div>
 
 
-    <div style=" padding-top: 10%;">
+    <div style=" padding-top: 10%;" >
         {% if lista %}   
         <table class="table table-striped" style="text-align: center;" >
 
-            <tr>
+            <tr class="info">
                 <th class="texto_centralizado" style="color: black;">Turma</th>
                 <th class="texto_centralizado" style="color: black;">Quantidade de Alunos</th>		
                 <th class="texto_centralizado" style="color: black;">Quantidade de professores</th>
@@ -31,7 +31,7 @@
                 <th></th>
             </tr>
             {% for item in lista %}
-            <tr>
+            <tr class="warning">
                 <td>
                     <a href="{% url 'escola:detalhe_turma' item.id %}"> {{ item.nome}} </a>
 

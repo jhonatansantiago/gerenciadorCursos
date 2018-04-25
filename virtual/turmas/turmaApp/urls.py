@@ -6,8 +6,6 @@ from django.views.generic import TemplateView
 from django.contrib.auth import views as auth_views
 
 
-
-
 urlpatterns = patterns('',
     url(r'^$', TemplateView.as_view(template_name='turmaApp/inicial.html'), name='inicial'),
 
@@ -36,11 +34,8 @@ urlpatterns = patterns('',
     url(r'sobre/$', TemplateView.as_view(template_name='turmaApp/sobre.html'), name='sobre'),
     url(r'^turma/lista/(?P<pk>\d+)/detalhe/$', views.TurmaDetailView.as_view(), name='detalhe_turma'),
 
-
     url(r'^login/$', auth_views.login, {'template_name': 'turmaApp/login.html'}, name='login'),
     url(r'^logout/$', auth_views.logout, name='logout'),
-
-
 
 
 )

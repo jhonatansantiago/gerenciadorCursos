@@ -23,7 +23,7 @@
         {% if lista %}   
         <table class="table table-striped" style="text-align: center;" >
 
-            <tr>
+            <tr class="info">
                 <th class="texto_centralizado" style="color: black;">Professor</th>
                 <th class="texto_centralizado" style="color: black;">Discplina</th>		
                 <th class="texto_centralizado" style="color: black;">Quantidade de turmas</th>
@@ -31,7 +31,7 @@
                 <th></th>
             </tr>
             {% for item in lista %}
-            <tr>
+            <tr class="warning">
                 <td>
                     <a href="#"> {{ item.nome}} </a>
 
