@@ -120,7 +120,7 @@ class ProfessorDeleteView(generic.DeleteView):
     template_name = 'turmaApp/remove.html'
     model = Professor
     success_url = 'saved'
-    
+
 #=========================================================================================================
 # Adicionando as views da escola, Falta configurar as Wiews abaixo
 '''
