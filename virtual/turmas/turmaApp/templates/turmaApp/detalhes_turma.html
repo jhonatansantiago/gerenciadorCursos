@@ -13,8 +13,8 @@
 
             <tr>
                 <th class="texto_centralizado" style="color: #000000" >Professor</th>
-                <th class="texto_centralizado" style="color: #000000" >Disciplina</th>	
-                <th class="texto_centralizado" style="color: #000000" >Tumas que ministra</th>	
+                <th class="texto_centralizado" style="color: #000000" >Disciplina</th>  
+                <th class="texto_centralizado" style="color: #000000" >Tumas que ministra</th>  
                 <th></th>
                 <th></th>
             </tr>
@@ -23,7 +23,7 @@
                 <td>
                     <a href="#"> {{ professor.nome}} </a>
 
-                </td>	
+                </td>   
                 <td style="color: #000000">{{ professor.disciplina }}</td>
                      
                 <td style="color: #000000">  
@@ -37,14 +37,14 @@
                 <td> <a href="{% url 'escola:edita_professor' professor.id %}"> [Editar]    </a> </td>
                 <td> <a href="{% url 'escola:deleta_professor' professor.id %}"> [Excluir] </a> </td>
             </tr>
-            {% endfor %}	
+            {% endfor %}    
         </table>
         {% else %}
         <p class="h2" style="color: #000000">Sem Professores nesta turma.</p>
         {% endif %}
 
     </div>
-     <br />
+     <br/>
       <h1 class="h2" style="color: #000000"> Alunos da turma {{turma.nome}}</h1>
     <div style=" padding-top: 3%;">
         {% if turma.aluno_set.all  %}   
@@ -61,19 +61,48 @@
                 <td>
                     <a href="#"> {{ aluno.nome}} </a>
 
-                </td>	
+                </td>   
                
 
                 <td> <a href="{% url 'escola:edita_aluno' aluno.id %}"> [Editar]    </a> </td>
                 <td> <a href="{% url 'escola:deleta_aluno' aluno.id %}"> [Excluir] </a> </td>
             </tr>
-            {% endfor %}	
+            {% endfor %}    
         </table>
         {% else %}
         <p class="h2" style="color: #000000">Sem Alunos nesta turma.</p>
         {% endif %}
 
     </div>
+
+    <br/>
+      <h1 class="h2" style="color: #000000"> Escola da turma {{turma.nome}}</h1>
+    <div style=" padding-top: 3%;">
+        <table class="table table-striped" style="text-align: center;" >
+        {% if turma.escola%}
+            <tr>
+                <th class="texto_centralizado" style="color: #000000">Escola</th>
+
+                <th></th>
+                <th></th>
+            </tr>
+           {%for aluno in turma.aluno_set.all %}
+            <tr>
+                <td>
+                    <a href="#"> {{ turma.escola.nome}} </a>
+
+                </td>   
+ 
+            </tr>
+            {% endfor %}    
+        </table>
+        {% else %}
+        <p class="h2" style="color: #000000">Essa turma não pertence a nenhuma escola.</p>
+        {% endif %}
+
+    </div>
+
+
     
 </form>
 

@@ -1,26 +1,20 @@
 from django.db import models
 from datetime import datetime    
 
-'''
-# Adicionando o models Escola para teste
-
 class Escola(models.Model):
-	nome = models.CharField(max_length=40)
-	endereco = models.CharField(max_length=100)
+	nome = models.CharField(max_length = 50)
 	data_criacao = models.DateTimeField(default=datetime.now, blank=True)
-
+	
 	def __str__(self):
-		return self.nome
-# Em testes class acima
-'''
+		return self.nome	
+
 class Turma(models.Model):
 	nome = models.CharField(max_length=30)
-	data_criacao = models.DateTimeField(default=datetime.now, blank=True)
-	# escola = models.ForeignKey(Escola)	
+	escola = models.ForeignKey(Escola)
+	data_criacao = models.DateTimeField(default=datetime.now, blank=True)	
 
 	def __str__(self):
 		return self.nome
-
 
 class Aluno(models.Model):
 	turma = models.ForeignKey(Turma)
@@ -38,6 +32,8 @@ class Professor(models.Model):
 
 	def __str__(self):
 		return self.nome
+
+
 
 
 

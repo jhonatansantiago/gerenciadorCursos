@@ -10,7 +10,14 @@ urlpatterns = patterns('',
     url(r'^$', TemplateView.as_view(template_name='turmaApp/inicial.html'), name='inicial'),
 
     url(r'^inicial/$', TemplateView.as_view(template_name='turmaApp/inicial.html'), name='inicial'),
+    #======================================================================================
+    url(r'^escola/lista/$', views.EscolaListView.as_view(), name='lista_escola'),
+    url(r'^escola/cadastro/$', views.EscolaCreateView.as_view(), name='cadastro_escola'),
+    url(r'^escola/(?P<pk>\d+)/edita/$', views.EscolaUpdateView.as_view(), name='edita_escola'),    
+    url(r'^escola/(?P<pk>\d+)/deleta/$', views.EscolaDeleteView.as_view(), name='deleta_escola'),
+    url(r'^pesquisa_escola/$', views.EscolaSearchView.as_view(), name='pesquisa_escola'),
 
+    #======================================================================================
     url(r'^escola/$', views.TurmaListView.as_view(), name='lista_turma'),
     url(r'^turma/lista/$', views.TurmaListView.as_view(), name='lista_turma'),
     url(r'^turma/cadastro/$', views.TurmaCreateView.as_view(), name='cadastro_turma'),

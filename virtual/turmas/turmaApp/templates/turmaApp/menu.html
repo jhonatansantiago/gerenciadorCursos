@@ -28,6 +28,14 @@
               <ul class="nav navbar-nav navbar-right">
 
                 <li class="dropdown">
+                    <a href="#" style="color: white;" class="dropdown-toggle" data-toggle="dropdown">Escolas<b class="caret" ></b></a>
+                    <ul class="dropdown-menu" style="background: buttonshadow" >
+                        <li><a  style="color: white;" href="{% url 'escola:lista_escola'%}">Lista</a></li>
+                        <li><a href="{% url 'escola:cadastro_escola' %}">Cadastrar</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
                     <a href="#" style="color: white;" class="dropdown-toggle" data-toggle="dropdown">Turmas<b class="caret" ></b></a>
                     <ul class="dropdown-menu" style="background: buttonshadow" >
                         <li><a  style="color: white;" href="{% url 'escola:lista_turma'%}">Lista</a></li>

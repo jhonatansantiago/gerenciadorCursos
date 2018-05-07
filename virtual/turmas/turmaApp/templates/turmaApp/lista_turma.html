@@ -25,6 +25,7 @@
 
             <tr class="info">
                 <th class="texto_centralizado" style="color: black;">Turma</th>
+                <th class="texto_centralizado" style="color: black;">Escola</th>
                 <th class="texto_centralizado" style="color: black;">Quantidade de Alunos</th>		
                 <th class="texto_centralizado" style="color: black;">Quantidade de professores</th>
                 <th></th>
@@ -34,8 +35,9 @@
             <tr class="warning">
                 <td>
                     <a href="{% url 'escola:detalhe_turma' item.id %}"> {{ item.nome}} </a>
+                </td>
+                <td style="color: black;">{{ item.escola}}</td>
 
-                </td>	
                 <td style="color: black;">{{ item.aluno_set.count }}</td>		
                 <td style="color: black;">{{ item.professor_set.count }}</td>
 
