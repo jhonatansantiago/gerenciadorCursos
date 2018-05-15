@@ -1,12 +1,16 @@
 from django.db import models
 from datetime import datetime    
 
+# Model da Escola =================================================================
+
 class Escola(models.Model):
 	nome = models.CharField(max_length = 50)
 	data_criacao = models.DateTimeField(default=datetime.now, blank=True)
 	
 	def __str__(self):
 		return self.nome	
+
+# Model da Turma =================================================================
 
 class Turma(models.Model):
 	nome = models.CharField(max_length=30)
@@ -16,6 +20,8 @@ class Turma(models.Model):
 	def __str__(self):
 		return self.nome
 
+# Model do Aluno =================================================================
+
 class Aluno(models.Model):
 	turma = models.ForeignKey(Turma)
 	nome = models.CharField(max_length = 50)
@@ -24,6 +30,8 @@ class Aluno(models.Model):
 
 	def __str__(self):
 		return self.nome
+
+# Model do professor =================================================================
 
 class Professor(models.Model):
 	turma = models.ManyToManyField(Turma)

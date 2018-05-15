@@ -45,8 +45,8 @@ class TurmaDetailView(generic.DetailView):
 	template_name = 'turmaApp/detalhes_turma.html'
 	model = Turma
 
-#=========================================================================================================
-# Adicionando as views da escola, Falta configurar as Wiews abaixo
+# Views da Escola ================================================================================
+# Adicionando as views da escola
 
 class EscolaListView(generic.ListView):
 	template_name = 'turmaApp/lista_escola.html'
